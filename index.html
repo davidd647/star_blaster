@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>STARBLASTER</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Play:700|Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1>STARBLASTER</h1>
+	<section class="game_screen">
+		<div class="game_start_screen">
+			<p class="top_title_in_game">Welcome to <span class="title">Starblaster</p>
+			<div class="instructions_bit">
+				<p>
+					Player 1: use the <span class="instruct_letter">F</span> key to shoot missiles, and the <span class="instruct_letter">A</span><span class="instruct_letter">W</span> and <span class="instruct_letter">D</span> keys to move your ship.
+				</p>
+				<p>
+					Player 2: use the <span class="instruct_letter">H</span> key to shoot missiles, and the <span class="instruct_letter">J</span><span class="instruct_letter">I</span> and <span class="instruct_letter">L</span> keys to move your ship.
+				</p>
+			</div>
+			<p>Survive as long as you can! Muahahaha!</p>
+			<div class="num_of_players">
+				<div>
+					<input type="radio" value="one_player" name="amnt_of_players" id="one_player" checked="checked">
+					<label for="one_player">One Player</label>
+				</div>
+				<div>
+					<input type="radio" value="two_players" name="amnt_of_players" id="two_players">
+					<label for="two_players">Two Players</label>
+				</div>
+			</div>
+			<h1 id="start_game">CLICK TO BEGIN</h1>
+		</div>
+		<div class="in_game_score">
+			<p id="points_earned_IG">Points: 0</p>
+			<p id="top_speed_IG">Top speed: 0AU/H</p>
+		</div>
+		<div class="game_over_screen">
+			<h1>GAME OVER</h1>
+			<p>Score: <span id="score_displayer"></span></p>
+			<p>Top speed: <span id="speed_displayer"></span></p>
+			<a href="#" class="play_again">Again?</a>
+		</div>
+		<canvas id="canvas" width="640" height="480">
+		</canvas>
+		<img id="explosion" src="img/explode.gif" alt="explosion2">
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

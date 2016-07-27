@@ -1,0 +1,154 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body{
+	text-align:center;
+	font-family: 'Play', sans-serif;
+	font-weight: bold;
+	color: #555;
+	background:#e0feff;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	height:100vh;
+	// font-family: 'Open Sans', sans-serif;
+}
+h1{
+	letter-spacing:10px;
+	text-shadow: 0px 0px 10px #8ea4ce;
+}
+p{
+	padding: 0 10px;
+	line-height:30px;
+	margin: 10px 0;
+	letter-spacing: 1px;
+}
+.instruct_letter{
+	border: 1px solid gray;
+	background: linear-gradient(rgba(0,0,0,0), rgba(100,100,100,0.5));
+	padding: 2px;
+	margin: 2px;
+	width: 36px;
+	height: 36px;
+	border-radius: 5px;
+	display:inline-block;
+}
+.instructions_bit{
+	display:flex;
+	padding: 0;
+	p{
+		border:1px solid gray;
+		margin: 0 10px;
+	}
+}
+.num_of_players{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+}
+.in_game_score{
+	position:absolute;
+	right:0;
+	top:10px;
+	color:#CCC;
+	text-align:right;
+}
+.top_title_in_game{
+	text-decoration: underline;
+	font-size: 22px;
+	margin-bottom: 35px;
+}
+.title{
+	color:#2d4084;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.game_screen{
+	width: 640px;
+	height: 480px;
+	margin: 0 auto;
+	position:relative;
+	overflow-y: hidden;
+	box-shadow: 0px 32px 9px -18px rgba(166, 218, 236, 0.26);
+}
+
+.game_start_screen{
+	width: 640px;
+	height:480px;
+	position:absolute;
+	z-index:1;
+	color:#555;
+	margin: 0;
+	padding:1px;
+	overflow: hidden;
+	background:lightblue;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	#start_game{
+		// position:fixed;
+		text-align: center;
+		margin: 0 auto;
+		margin-top:50px;
+		cursor:pointer;
+		z-index: 10;
+		color:#CCC;
+		font-size:50px;
+		display:block;
+		background: darkblue;
+		border-radius: 25px;
+		width: calc(100% - 50px);
+		box-shadow: 0px 32px 9px -18px rgba(128, 186, 205, 0.78);
+		letter-spacing: 2px;
+		height:75px;
+		line-height:75px;
+		text-shadow: none;
+		transition: 1s ease-in-out all;
+	}
+	#start_game:hover{
+		color:#FFF;
+		text-shadow: 0px 0px 10px #8ea4ce;
+	}
+}
+
+.game_over_screen{
+	width:640px;
+	height: 480px;
+	margin: 0 auto;
+	position: fixed;
+	z-index: -1;
+	background:darkblue;
+	opacity:0;
+	padding:1px;
+	color:white;
+	font-size:30px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	a{
+		text-transform: uppercase;
+		padding-top:50px;
+		color:#00c1ff;
+	}
+}
+
+#canvas{
+	border:1px solid gray;
+	background: darkblue;
+	width: 640px;
+	height: 480px;
+}
+
+#explosion{
+	display:block;
+	position:absolute;
+	z-index: -1;
+	left:0;
+	top:0;
+}
